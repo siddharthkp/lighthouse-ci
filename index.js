@@ -5,7 +5,11 @@ const config = require('lighthouse/lighthouse-core/config/default.json')
 const flags = {}
 const url = 'https://example.com'
 
-// const launcher = new chrome({ port: 9222, autoSelectChrome: true })
+try {
+  const launcher = new chrome({ port: 9222, autoSelectChrome: true })
+} catch (err) {
+  throw err
+}
 
 // launcher.isDebuggerReady()
 // .then((a, b) => console.log(a, b))
