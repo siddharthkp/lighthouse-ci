@@ -40,7 +40,7 @@ class LighthouseWrapper {
     // Wait for Chrome to be usable
     return new Promise((resolve) => {
       console.log('waiting for chrome to be usable')
-      setTimeout(resolve, 2000);
+      setTimeout(resolve, 10000);
     });
   }
 
