@@ -18,5 +18,7 @@ launcher
 })
 .catch(err => {
   console.log(err)
-  launcher.kill().then(() => throw(err)) // Kill Chrome if there's an error.
+  launcher.kill().then(() => { // Kill Chrome if there's an error.
+    throw(err)
+  })
 })
