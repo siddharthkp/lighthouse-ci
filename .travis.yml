@@ -14,7 +14,7 @@ install:
 
 script:
   - node index.js
-  - ./node_modules/.bin/lighthouse https://example.com --output=pretty --verbose
+  - ./node_modules/.bin/lighthouse https://example.com --output=pretty
 
 cache:
   directories:
