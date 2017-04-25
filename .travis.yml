@@ -1,17 +1,17 @@
+dist: trusty
 language: node_js
 node_js: "6"
 
 install:
-  - npm install -g lighthouse
+  - npm install lighthouse
   - export DISPLAY=:99.0
   - export LIGHTHOUSE_CHROMIUM_PATH="$(pwd)/chrome-linux/chrome"
   - sh -e /etc/init.d/xvfb start
-  - npm explore -g lighthouse -- ./lighthouse-core/scripts/download-chrome.sh
-  - mv $(npm root -g)/lighthouse/chrome-linux .
+  - ./node_modules/lighthouse/lighthouse-core/scripts/download-chrome.sh
   - $LIGHTHOUSE_CHROMIUM_PATH --version
 
 script:
-  - lighthouse https://example.com --output=pretty --verbose
+  - ./node_modules/.bin/lighthouse https://example.com --output=pretty --verbose
 
 cache:
   directories:
