@@ -7,8 +7,7 @@ before_script:
   - export LIGHTHOUSE_CHROMIUM_PATH="$(pwd)/chrome-linux/chrome"
   - ./node_modules/lighthouse/lighthouse-core/scripts/download-chrome.sh
   - sh -e /etc/init.d/xvfb start
-scripts:
-  - ./node_modules/.bin/lighthouse https://example.com --verbose --pretty-output=true
+script: ./node_modules/.bin/lighthouse https://example.com --verbose --pretty-output=true
 cache:
   directories:
     - node_modules
