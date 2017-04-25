@@ -18,6 +18,7 @@ class LighthouseWrapper {
   }
 
   startChrome() {
+    console.log('starting chrome')
     if (this._chromeProcess) {
       return Promise.resolve();
     }
@@ -38,6 +39,7 @@ class LighthouseWrapper {
 
     // Wait for Chrome to be usable
     return new Promise((resolve) => {
+      console.log('waiting for chrome to be usable')
       setTimeout(resolve, 2000);
     });
   }
