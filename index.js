@@ -7,16 +7,24 @@ const url = 'https://example.com'
 
 const launcher = new chrome({ port: 9222, autoSelectChrome: true })
 
-launcher.run()
-.then(() => lighthouse(url, flags, config)) // Run Lighthouse
-.then(results => launcher.kill().then(() => results)) // Kill Chrome and return results
-.then(results => {
-  results.artifacts = undefined // Disable artifacts
-  console.log(results)
-})
+launcher.isDebuggerReady()
+.then((a, b) => console.log(a, b))
 .catch(err => {
   console.log(err)
-  launcher.kill().then(() => { // Kill Chrome if there's an error.
-    throw(err)
-  })
+  throw err
 })
+
+
+// launcher.run()
+// .then(() => lighthouse(url, flags, config)) // Run Lighthouse
+// .then(results => launcher.kill().then(() => results)) // Kill Chrome and return results
+// .then(results => {
+//   results.artifacts = undefined // Disable artifacts
+//   console.log(results)
+// })
+// .catch(err => {
+//   console.log(err)
+//   launcher.kill().then(() => { // Kill Chrome if there's an error.
+//     throw(err)
+//   })
+// })
