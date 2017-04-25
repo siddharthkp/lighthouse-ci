@@ -1,7 +1,7 @@
 const lighthouse = require('lighthouse')
 const chrome = require('lighthouse/lighthouse-cli/chrome-launcher.js').ChromeLauncher
 
-const config = require('lighthouse/lighthouse-core/config/perf.json')
+const config = require('lighthouse/lighthouse-core/config/default.json')
 const flags = {}
 const url = 'https://example.com'
 
