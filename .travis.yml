@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - "6"
+before_script:
+  - npm install lighthouse
+  - export DISPLAY=:99.0
+  - export LIGHTHOUSE_CHROMIUM_PATH="$(pwd)/chrome-linux/chrome"
+  - ./node_modules/lighthouse/lighthouse-core/scripts/download-chrome.sh
+  - sh -e /etc/init.d/xvfb start
+scripts:
+  - ./node_modules/.bin/lighthouse https://example.com --verbose --pretty-output=true
+cache:
+  directories:
+    - node_modules
+notifications:
+  email: false
