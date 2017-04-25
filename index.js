@@ -8,7 +8,7 @@ const url = 'https://example.com'
 
 const launcher = new chrome({ port: 9222, autoSelectChrome: true })
 
-// launcher.isDebuggerReady()
+launcher.isDebuggerReady()
 // .then((a, b) => console.log(a, b))
 // .catch(err => {
 //   console.log(err)
