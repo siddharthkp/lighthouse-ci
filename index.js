@@ -7,15 +7,7 @@ const url = 'https://example.com'
 
 const launcher = new chrome({ port: 9222, autoSelectChrome: true })
 
-launcher
-.isDebuggerReady()
-.catch(() => {
-  if (flags.skipAutolaunch) {
-    console.log('skip auto launch')
-    return
-  }
-  return launcher.run() // Launch Chrome.
-})
+launcher.run()
 .then(() => lighthouse(url, flags, config)) // Run Lighthouse
 .then(results => launcher.kill().then(() => results)) // Kill Chrome and return results
 .then(results => {
