@@ -13,8 +13,8 @@ install:
   - $LIGHTHOUSE_CHROMIUM_PATH --version
 
 script:
-  - node index.js
   - ./node_modules/.bin/lighthouse https://example.com --output=pretty
+  - node index.js
 
 cache:
   directories:
