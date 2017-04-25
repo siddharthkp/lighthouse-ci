@@ -13,6 +13,7 @@ install:
   - $LIGHTHOUSE_CHROMIUM_PATH --version
 
 script:
+  - sleep 15
   - node index.js
 # - ./node_modules/.bin/lighthouse https://example.com --output=pretty
 

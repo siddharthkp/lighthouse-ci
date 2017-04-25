@@ -8,14 +8,11 @@ const url = 'https://example.com'
 const launcher = new chrome({ port: 9222, autoSelectChrome: true })
 
 launcher.run()
-.then((err, something) => {
-  console.log('--------')
-  console.log(err)
-  console.log('--------')
-  console.log(something)
-  console.log('--------')
-  lighthouse(url, flags, config)
-}) // Run Lighthouse
+.then(() => new Promise(resolve => {
+  console.log('wait time bro')
+  setTimeout(resolve, 15000)
+}))
+.then(() => lighthouse(url, flags, config)) // Run Lighthouse
 .then(results => launcher.kill().then(() => results)) // Kill Chrome and return results
 .then(results => {
   results.artifacts = undefined // Disable artifacts
