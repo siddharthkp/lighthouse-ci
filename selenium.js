@@ -68,5 +68,8 @@ class LighthouseWrapper {
 
 const wrapper = new LighthouseWrapper();
 
-wrapper.run('https://example.com')
+wrapper.downloadChrome()
+.then(() => wrapper.startChrome())
+.then(() => wrapper.run('https://example.com'))
 .then(results => console.log(results))
+.then(() => wrapper.killChrome())

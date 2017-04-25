@@ -6,15 +6,15 @@ node_js:
 
 install:
   - npm install
-  - export DISPLAY=:99.0
-  - export LIGHTHOUSE_CHROMIUM_PATH="$(pwd)/chrome-linux/chrome"
-  - sh -e /etc/init.d/xvfb start
-  - ./node_modules/lighthouse/lighthouse-core/scripts/download-chrome.sh
-  - $LIGHTHOUSE_CHROMIUM_PATH --version
+  # - export DISPLAY=:99.0
+  # - export LIGHTHOUSE_CHROMIUM_PATH="$(pwd)/chrome-linux/chrome"
+  # - sh -e /etc/init.d/xvfb start
+  # - ./node_modules/lighthouse/lighthouse-core/scripts/download-chrome.sh
+  # - $LIGHTHOUSE_CHROMIUM_PATH --version
 
 script:
     - node selenium.js
-# - ./node_modules/.bin/lighthouse https://example.com --output=pretty
+    # - ./node_modules/.bin/lighthouse https://example.com --output=pretty
 
 
 cache:
