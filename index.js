@@ -8,6 +8,7 @@ const url = 'https://example.com'
 try {
   const launcher = new chrome({ port: 9222, autoSelectChrome: true })
 } catch (err) {
+  console.log(err)
   throw err
 }
 
