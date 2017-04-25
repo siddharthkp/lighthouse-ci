@@ -1,0 +1,24 @@
+{
+  "name": "lighthouse-ci",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "lighthouse": "1.6.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siddharthkp/lighthouse-ci.git"
+  },
+  "keywords": [],
+  "author": "siddharthkp",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/siddharthkp/lighthouse-ci/issues"
+  },
+  "homepage": "https://github.com/siddharthkp/lighthouse-ci#readme"
+}
