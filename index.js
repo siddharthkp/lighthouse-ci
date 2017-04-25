@@ -6,7 +6,7 @@ const flags = {}
 const url = 'https://example.com'
 
 
-const launcher = new chrome({ port: 9222, autoSelectChrome: true })
+const launcher = new chrome({ port: 9222, autoSelectChrome: false })
 
 launcher.isDebuggerReady()
 // .then((a, b) => console.log(a, b))
