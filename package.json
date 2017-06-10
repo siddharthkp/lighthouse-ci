@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "lighthouse": "1.6.3",
+    "lighthouse": "2.1.0",
     "selenium-assistant": "5.0.4"
   },
   "devDependencies": {},
